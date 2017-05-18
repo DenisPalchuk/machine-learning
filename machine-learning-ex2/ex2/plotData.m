@@ -4,19 +4,21 @@ function plotData(X, y)
 %   and o for the negative examples. X is assumed to be a Mx2 matrix.
 
 % Create New Figure
-figure; hold on;
-
+figure; 
+hold on;
 % ====================== YOUR CODE HERE ======================
 % Instructions: Plot the positive and negative examples on a
 %               2D plot, using the option 'k+' for the positive
 %               examples and 'ko' for the negative examples.
 %
 
+posit = find(y == 1);
+neg = find(y == 0);
 
+plot(X(posit,1), X(posit,2), 'k+', 'LineWidth', 2, 'MarkerSize', 7);
 
-
-
-
+plot(X(neg,1), X(neg,2), 'ko', 'MarkerSize', 7, 
+  'MarkerFaceColor','r');
 
 
 
